@@ -1,0 +1,357 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>local</groupId>
+	<artifactId>central</artifactId>
+	<version>0.0.0</version>
+
+	<packaging>pom</packaging>
+
+	<dependencies>
+
+	<!-- The OSGi framework RI is Equinox -->
+        <dependency>
+            <groupId>org.eclipse.platform</groupId>
+            <artifactId>org.eclipse.osgi</artifactId>
+            <version>3.13.0</version>
+        </dependency>
+
+        <!-- Declarative Services -->
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.scr</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+
+        <!-- Configuration Admin -->
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.configadmin</artifactId>
+            <version>1.9.2</version>
+        </dependency>
+
+        <!-- Metatype -->
+        <dependency>
+            <groupId>org.eclipse.platform</groupId>
+            <artifactId>org.eclipse.equinox.metatype</artifactId>
+            <version>1.4.400</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.service.metatype</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+
+        <!-- Event Admin -->
+        <dependency>
+            <groupId>org.eclipse.platform</groupId>
+            <artifactId>org.eclipse.equinox.event</artifactId>
+            <version>1.4.200</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.service.event</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+
+        <!-- Log Stream Service -->
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.service.log</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.platform</groupId>
+            <artifactId>org.eclipse.equinox.log.stream</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- Http Whiteboard -->
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.http.jetty</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+
+        <!-- Http Servlet 3.1 API with contract -->
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.http.servlet-api</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+
+        <!-- JAX-RS Whiteboard -->
+        <dependency>
+            <groupId>org.apache.aries.jax.rs</groupId>
+            <artifactId>org.apache.aries.jax.rs.whiteboard</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- JAX-RS 2.1 API with contract -->
+        <dependency>
+            <groupId>org.apache.aries.spec</groupId>
+            <artifactId>org.apache.aries.javax.jax.rs-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- OSGi Function -->
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.util.function</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
+        <!-- OSGi Promise -->
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.util.promise</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
+        <!-- OSGi PushStream -->
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.util.pushstream</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- OSGi Converter -->
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.util.converter</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        
+        <!-- OSGi Transaction Control -->
+        <dependency>
+            <groupId>org.apache.aries.tx-control</groupId>
+            <artifactId>tx-control-service-xa</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.aries.tx-control</groupId>
+            <artifactId>tx-control-provider-jdbc-xa</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.aries.tx-control</groupId>
+            <artifactId>tx-control-provider-jpa-xa</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        
+        <!-- OSGi Configurator -->
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.configurator</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- OSGi JPA Service -->
+        <dependency>
+            <groupId>org.apache.aries.jpa</groupId>
+            <artifactId>org.apache.aries.jpa.container</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+
+        <!-- Used heavily in conjunction with JDBC -->
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.service.jdbc</artifactId>
+            <version>1.0.0</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Several implementations need to log using SLF4J -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+		<!-- OSGi APIs -->
+		<dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>osgi.core</artifactId>
+            <version>7.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>osgi.cmpn</artifactId>
+            <version>7.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>osgi.annotation</artifactId>
+            <version>7.0.0</version>
+        </dependency>
+
+		<!-- Testing -->
+		<dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.junit</artifactId>
+            <version>4.12_1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>2.13.0</version>
+        </dependency>
+
+		<!-- Eclipse Xtend -->
+		<dependency>
+			<groupId>org.eclipse.xtend</groupId>
+			<artifactId>org.eclipse.xtend.lib</artifactId>
+			<version>2.14.0</version>
+		</dependency>	
+
+        <!-- Somehow the right Guava version is not transitively downloaded for Xtend -->
+		<dependency>
+		  <groupId>com.google.guava</groupId>
+		  <artifactId>guava</artifactId>
+		  <version>21.0</version>
+		</dependency>
+		
+		<!-- Felix Gogo -->
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.gogo.shell</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.felix</groupId>
+		    <artifactId>org.apache.felix.gogo.command</artifactId>
+		    <version>1.0.10</version>
+		</dependency>
+
+		<dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.gogo.command</artifactId>
+            <version>1.0.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.osgi</groupId>
+                    <artifactId>org.osgi.core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.osgi</groupId>
+                    <artifactId>org.osgi.compendium</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+		
+		<!-- Felix HTTP -->
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.http.servlet-api</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.http.api</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.http.jetty</artifactId>
+			<version>4.0.0</version>
+		</dependency> 
+		
+		<!-- Felix SCR -->
+		<dependency>
+		    <groupId>org.apache.felix</groupId>
+		    <artifactId>org.apache.felix.scr</artifactId>
+		    <version>2.1.0</version>
+		</dependency>
+		
+		<!-- Vaadin -->
+		<dependency>
+		    <groupId>com.vaadin</groupId>
+		    <artifactId>vaadin-server</artifactId>
+		    <version>8.4.4</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.vaadin</groupId>
+		    <artifactId>vaadin-themes</artifactId>
+		    <version>8.4.4</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.vaadin</groupId>
+		    <artifactId>vaadin-client-compiled</artifactId>
+		    <version>8.4.4</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.vaadin</groupId>
+		    <artifactId>vaadin-push</artifactId>
+		    <version>8.4.4</version>
+		</dependency>
+
+		<!-- XCore -->
+		<dependency>
+		    <groupId>org.eclipse.emf</groupId>
+		    <artifactId>org.eclipse.emf.ecore.xcore</artifactId>
+		    <version>1.3.1</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.eclipse.emf</groupId>
+		    <artifactId>org.eclipse.emf.ecore.xcore.lib</artifactId>
+		    <version>1.1.100</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.eclipse.xtext</groupId>
+		    <artifactId>org.eclipse.xtext.ecore</artifactId>
+		    <version>2.14.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.eclipse.emf</groupId>
+		    <artifactId>org.eclipse.emf.codegen.ecore.xtext</artifactId>
+		    <version>1.2.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.eclipse.xtext</groupId>
+		    <artifactId>org.eclipse.xtext.xbase</artifactId>
+		    <version>2.14.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.eclipse.emf</groupId>
+		    <artifactId>org.eclipse.emf.codegen.ecore</artifactId>
+		    <version>2.12.0</version>
+		</dependency>
+				
+		<dependency>
+		    <groupId>org.eclipse.jdt</groupId>
+		    <artifactId>org.eclipse.jdt.core</artifactId>
+		    <version>3.13.102</version>
+		</dependency>
+	</dependencies>
+
+</project>

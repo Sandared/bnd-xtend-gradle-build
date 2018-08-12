@@ -1,0 +1,12 @@
+Bundle-SymbolicName: xtend.gradle.build.test
+Bundle-Version: 1.0.0.${tstamp}
+Bundle-Description: ${warning;Please update this Bundle-Description in bnd.bnd}
+-buildpath: \
+	org.eclipse.xtend.lib,\
+	org.eclipse.xtend.lib.macro,\
+	org.eclipse.xtext.xbase.lib,\
+	com.google.guava;version=21.0,\
+	osgi.cmpn;version=7.0
+	
+Private-Package: xtend.gradle.build.test
+src=src,xtend-gen

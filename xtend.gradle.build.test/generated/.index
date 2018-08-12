@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repository xmlns="http://www.osgi.org/xmlns/repository/v1.0.0" name="xtend.gradle.build.test" increment="1534070093112">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="xtend.gradle.build.test"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" value="1.0.0.201808121034" type="Version"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="bundle-version" value="1.0.0.201808121034" type="Version"/>
+      <attribute name="osgi.wiring.bundle" value="xtend.gradle.build.test"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="bundle-version" value="1.0.0.201808121034" type="Version"/>
+      <attribute name="osgi.wiring.host" value="xtend.gradle.build.test"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="size" value="467" type="Long"/>
+      <attribute name="url" value="generated/xtend.gradle.build.test.jar"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+      <attribute name="osgi.content" value="D8B9D7E24A81EFC98F264CB92AE3FD3BA3D1F69A52D0857700720D45FEE5F7CF"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/C:/MyPrograms/Eclipse/Photon/JDT/workspace/repotest"/>
+      <attribute name="project.path" value="/xtend.gradle.build.test"/>
+    </capability>
+  </resource>
+</repository>
